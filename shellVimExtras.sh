@@ -9,7 +9,7 @@ if [ $OHMY_ZSH_INSTALLED -eq 0 ]; then
     echo "Zsh Already Installed"
 else
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    cp /vagrant/vagrantscripts/vimrc ~/.vimrc
+    cp vimrc ~/.vimrc
     sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 #    wget https://raw.githubusercontent.com/ahmetb/kubectl-aliases/master/.kubectl_aliases ~
@@ -18,6 +18,11 @@ curl https://raw.githubusercontent.com/ahmetb/kubectl-aliases/master/.kubectl_al
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
     git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+
+    sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx
+    sudo ln -s /opt/kubectx/kubectx /usr/local/bin/kubectx
+    sudo ln -s /opt/kubectx/kubens /usr/local/bin/kubens
+
     mkdir -p ~/.oh-my-zsh/completions
     chmod -R 755 ~/.oh-my-zsh/completions
     ln -s /opt/kubectx/completion/kubectx.zsh ~/.oh-my-zsh/completions/_kubectx.zsh
@@ -30,4 +35,5 @@ curl https://raw.githubusercontent.com/ahmetb/kubectl-aliases/master/.kubectl_al
 #    sed  -i $'/  git/c  git helm docker docker-compose docker-machine kubectl kube-ps1 zsh-autosuggestions zsh-syntax-highlighting vagrant vagrant-prompt' ~/.zshrc
     sed -i 's/plugins=.*/plugins=(git golang helm docker docker-compose docker-machine kubectl kube-ps1 zsh-autosuggestions zsh-syntax-highlighting vagrant vagrant-prompt)/' ~/.zshrc
     echo "source ~/.kubectl_aliases" >> ~/.zshrc
+    echo "autoload -U compinit && compinit" >> ~/.zshrc
 fi
