@@ -30,6 +30,7 @@
       //   "fontFace": "FuraCode Nerd Font"
       //   "fontFace": "RobotoMono Nerd Font"
       "fontFace": "CaskaydiaCove Nerd Font"
+      "fontWeight": "normal",
       // Put settings here that you want to apply to all profiles.
     },
     "list": [
