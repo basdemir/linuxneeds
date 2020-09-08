@@ -1,0 +1,9 @@
+### k3sup link
+https://github.com/alexellis/k3sup
+
+```
+curl -sLS https://get.k3sup.dev | sh
+sudo install k3sup /usr/local/bin/
+
+k3sup --help
+```
