@@ -17,7 +17,7 @@ curl https://raw.githubusercontent.com/ahmetb/kubectl-aliases/master/.kubectl_al
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
     git clone https://github.com/endaaman/lxd-completion-zsh ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/lxd-completion-zsh
-
+    git clone https://github.com/esc/conda-zsh-completion  ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/conda-zsh-completion
     git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 
     sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx
@@ -34,7 +34,7 @@ curl https://raw.githubusercontent.com/ahmetb/kubectl-aliases/master/.kubectl_al
  # sed -i -e "/ZSH_THEME=\"bira\"/r zshrcinsert"  -e "//d"  ~/.zshrc
     sed -i -e "/ZSH_THEME=\"robbyrussell\"/c ZSH_THEME=\"bira\""  -e "//d"  ~/.zshrc
 #    sed  -i $'/  git/c  git helm docker docker-compose docker-machine kubectl kube-ps1 zsh-autosuggestions zsh-syntax-highlighting vagrant vagrant-prompt' ~/.zshrc
-    sed -i 's/plugins=.*/plugins=(git golang helm docker docker-compose docker-machine kubectl kube-ps1 zsh-autosuggestions zsh-syntax-highlighting vagrant vagrant-prompt lxd-completion-zsh)/' ~/.zshrc
+    sed -i 's/plugins=.*/plugins=(git golang conda-zsh-completion helm docker docker-compose docker-machine kubectl kube-ps1 zsh-autosuggestions zsh-syntax-highlighting vagrant vagrant-prompt lxd-completion-zsh)/' ~/.zshrc
     echo "source ~/.kubectl_aliases" >> ~/.zshrc
     echo "autoload -U compinit && compinit" >> ~/.zshrc
 fi
