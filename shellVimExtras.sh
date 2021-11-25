@@ -29,12 +29,25 @@ curl https://raw.githubusercontent.com/ahmetb/kubectl-aliases/master/.kubectl_al
     ln -s /opt/kubectx/completion/_kubectx.zsh ~/.oh-my-zsh/completions/_kubectx.zsh
     ln -s /opt/kubectx/completion/_kubens.zsh ~/.oh-my-zsh/completions/_kubens.zsh
 
+    # First install eksctl and aws-cli
+    curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+    sudo mv /tmp/eksctl /usr/local/bin
+    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+    sudo apt install unzip -y
+    unzip awscliv2.zip
+    sudo ./aws/install
+    
+    mkdir -p ~/.oh-my-zsh/custom/plugins
+    cd ~/.oh-my-zsh/custom/plugins
+    eksctl completion zsh > _eksctl
     # sed  $'/ZSH_THEME="robbyrussell"/r zshrcinsert\n /ZSH_THEME="robbyrussell"/,/ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )/d' ~/.zshrc
  #   sed -i -e "/ZSH_THEME=\"robbyrussell\"/r zshrcinsert"  -e "//d"  ~/.zshrc
  # sed -i -e "/ZSH_THEME=\"bira\"/r zshrcinsert"  -e "//d"  ~/.zshrc
     sed -i -e "/ZSH_THEME=\"robbyrussell\"/c ZSH_THEME=\"bira\""  -e "//d"  ~/.zshrc
 #    sed  -i $'/  git/c  git helm docker docker-compose docker-machine kubectl kube-ps1 zsh-autosuggestions zsh-syntax-highlighting vagrant vagrant-prompt' ~/.zshrc
-    sed -i 's/plugins=.*/plugins=(git golang conda-zsh-completion helm docker docker-compose docker-machine kubectl kube-ps1 zsh-autosuggestions zsh-syntax-highlighting vagrant vagrant-prompt lxd-completion-zsh)/' ~/.zshrc
+    sed -i 's/plugins=.*/plugins=(eksctl zsh-aws-vault git golang conda-zsh-completion helm docker docker-compose docker-machine kubectl kube-ps1 zsh-autosuggestions zsh-syntax-highlighting vagrant vagrant-prompt lxd-completion-zsh)/' ~/.zshrc
     echo "source ~/.kubectl_aliases" >> ~/.zshrc
+    echo "autoload bashcompinit && bashcompinit" >> ~/.zshrc
     echo "autoload -U compinit && compinit" >> ~/.zshrc
+    echo "complete -C '/usr/local/bin/aws_completer' aws" >> ~/.zshrc    
 fi
