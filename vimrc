@@ -19,3 +19,4 @@ call plug#end()
 syntax on
 
 colorscheme molokai_dark
+set pastetoggle=<F3>
