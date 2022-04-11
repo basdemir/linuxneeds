@@ -4,6 +4,10 @@ call plug#begin('~/.vim/plugged')
         Plug 'vim-airline/vim-airline-themes'
         Plug 'jiangmiao/auto-pairs'
         Plug 'scrooloose/nerdtree'
+        Plug 'hashivim/vim-terraform'
+        Plug 'Chiel92/vim-autoformat'
+        Plug 'sheerun/vim-polyglot'
+        Plug 'ycm-core/YouCompleteMe'
         Plug 'tpope/vim-fugitive'
         Plug 'tpope/vim-sensible'
         Plug 'tpope/vim-surround'
@@ -29,3 +33,4 @@ syntax on
 
 colorscheme molokai_dark
 set pastetoggle=<F3>
+"       set relativenumber
