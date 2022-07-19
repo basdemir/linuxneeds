@@ -1,0 +1,108 @@
+{
+    "editor.mouseWheelZoom": true,
+    "python.jediEnabled": true,
+    "editor.fontFamily": "\"FiraCode Nerd Font Mono\",\"CaskaydiaCove NF\",\"CaskaydiaCove Nerd Font Mono\",\"RobotoMono NF\",\"FiraCode NF\",'Monaco NF', Consolas, 'Courier New', monospace",
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "yaml.schemas": {
+        "file:///home/dev/.vscode-server/extensions/docsmsft.docs-yaml-0.2.4/schemas/toc.schema.json": "/toc\\.yml/i"
+    },
+    "markdownlint.customRules": [
+        "{docsmsft.docs-markdown}/markdownlint-custom-rules/rules.js"
+    ],
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "sync.gist": "9f19fa46ce224c1f6fbbeb0e121429f5",
+    "editor.tabCompletion": "on",
+    "terminal.integrated.fontFamily": "\"Monaco Nerd Font Mono\",\"CaskaydiaCove Nerd Font Mono\",\"FiraCode Nerd Font Mono\",\"FiraCode NF\",'RobotoMono NF','Monaco NF', Consolas, 'Courier New', monospace",
+    "terminal.external.windowsExec": "",
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "files.associations": {
+        "*.html": "html",
+        "Vagrantfile": "ruby",
+        "*.hcl": "terraform"
+    },
+    "editor.wordWrap": "on",
+    "editor.insertSpaces": false,
+    "go.useLanguageServer": true,
+    "editor.multiCursorModifier": "alt",
+    "markdownlint.config": {
+        "MD025": {
+            "front_matter_title": ""
+        }
+    },
+    "editor.fontLigatures": true,
+    "files.autoSave": "onFocusChange",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "remote.SSH.remotePlatform": {
+        "172.17.8.51": "linux",
+        "dev-ws": "linux"
+    },
+    "extensions.ignoreRecommendations": true,
+    "remote.SSH.configFile": "C:\\Users\\dev\\.ssh\\myremotes",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "debug.console.fontSize": 10,
+    "javascript.preferences.quoteStyle": "single",
+    "typescript.preferences.quoteStyle": "single",
+    "emmet.excludeLanguages": [
+        "markdown"
+    ],
+    "editor.tokenColorCustomizations": null,
+    "prettier.jsxSingleQuote": true,
+    "redhat.telemetry.enabled": false,
+    "vsicons.dontShowNewVersionMessage": true,
+    "yaml.customTags": [
+        "!encrypted/pkcs1-oaep scalar",
+        "!vault scalar"
+    ],
+    "terminal.integrated.fontSize": 15,
+    "gitlens.gitCommands.skipConfirmations": [
+        "fetch:command",
+        "stash-push:command",
+        "switch:command",
+        "tag-create:command"
+    ],
+    "editor.bracketPairColorization.enabled": true,
+    "editor.fontSize": 18,
+    "explorer.confirmDelete": false,
+    "editor.formatOnSave": true,
+    "python.condaPath": "/Users/dev/micromamba/condabin/conda",
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "100"
+    ],
+    "terraform.languageServer": {
+        "external": true,
+        "pathToBinary": "",
+        "args": [
+            "serve"
+        ],
+        "maxNumberOfProblems": 100,
+        "trace.server": "off"
+    },
+    "[terraform]": {
+        "editor.defaultFormatter": "hashicorp.terraform",
+        "editor.formatOnSave": true
+    },
+    "terraform-ls.experimentalFeatures": {
+        "validateOnSave": true
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.folders.theme": "specific",
+    "gopls": {
+        "experimentalWorkspaceModule": true,
+    },
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.variableTypes": true,
+    "workbench.colorTheme": "Black",
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+    "python.linting.enabled": true,
+    "workbench.colorCustomizations": {
+        "titleBar.activeBackground": "#042242",
+    }
+}
